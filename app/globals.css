@@ -1,0 +1,189 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+:root {
+  height: 100%;
+  /* min-height: 2000px; */
+}
+
+@layer base {
+  :root {
+    --bg: #f4f4f4;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: #fff;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 232 100% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --bg: #232323;
+    --background: 232 50% 5%;
+    --foreground: 232 5% 90%;
+    --card: #1e1e22;
+    --card-foreground: 232 5% 90%;
+    --popover: 232 50% 5%;
+    --popover-foreground: 232 5% 90%;
+    --primary: 232 100% 51%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 232 30% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 194 30% 15%;
+    --muted-foreground: 232 5% 60%;
+    --accent: 194 30% 15%;
+    --accent-foreground: 232 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 232 5% 90%;
+    --border: 232 30% 18%;
+    --input: 232 30% 18%;
+    --ring: 232 100% 51%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.carouselCardHeaderShadow {
+  box-shadow: 0px 32px 64px -12px rgba(16, 24, 40, 0.14);
+}
+
+.companeis-section {
+  border-radius: 15px;
+  /* border:0px */
+  border: 1px solid #fff;
+  background: linear-gradient(
+    316deg,
+    rgba(230, 233, 255, 0.55) -8.43%,
+    rgba(230, 233, 255, 0) 45.63%
+  );
+}
+
+.swiper {
+  padding: 0 0.8rem !important;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  font-size: 2rem !important;
+  color: #0525ff !important;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 2rem !important;
+  color: #0525ff !important;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  @apply mt-8;
+}
+
+.swiper-pagination-bullet {
+  @apply w-6 h-6 rounded-full relative bg-white  !opacity-100 !important;
+  box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.08),
+    0px 8px 8px -4px rgba(16, 24, 40, 0.03) !important;
+}
+
+.swiper-pagination-bullet::before {
+  content: "";
+
+  @apply absolute w-3 h-3 bg-primary  rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-primary !important;
+}
+
+.swiper-pagination-bullet-active::before {
+  @apply bg-white;
+}
+
+.mode-toggle-bg-light {
+  background: #f5f5f5;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.11) inset;
+}
+
+.mode-toggle-bg-dark {
+  border: 1px solid #363638;
+  background: #1e1e1e;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.11) inset;
+}
+
+.mode-toggle-circle-dark {
+  border: 1px solid #363638;
+
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #242424 83.33%,
+    #1e1e1e 100%
+  );
+
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.mode-toggle-circle-light {
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #fff 83.33%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.table_separate_rows {
+  border-collapse: separate !important;
+  border-spacing: 0 12px !important;
+}
+
+.test_solution {
+  background-clip: text !important;
+}
+
+.custom-table thead tr th:first-child {
+  width: 300px !important;
+}
+
+.custom-table thead tr th:nth-child(2) {
+  width: 491px !important;
+}
+
+.custom-table thead tr th:nth-child(3) {
+  width: 150px !important;
+}
+
+.custom-table tbody tr td:first-child {
+  width: 300px !important;
+}
+
+.custom-table tbody tr td:nth-child(2) {
+  width: 491px !important;
+}
+
+.custom-table tbody tr td:nth-child(3) {
+  width: 150px !important;
+}
