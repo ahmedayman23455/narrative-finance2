@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import StakingCard from "./StakingCard";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { A11y, FreeMode, Scrollbar } from "swiper/modules";
+import { FreeMode, Scrollbar, Mousewheel } from "swiper/modules";
 import { funds } from "@/data/demoFunds";
 import "swiper/css";
 import "swiper/css/scrollbar";
@@ -35,9 +35,11 @@ const StakingCards = () => {
             slidesPerGroup: 4.2,
           },
         }}
-        modules={[FreeMode, Scrollbar]}
+        modules={[FreeMode, Scrollbar, Mousewheel]}
         scrollbar={{ draggable: true }}
         grabCursor={false}
+        mousewheel={{ forceToAxis: true }}
+        freeMode={true}
       >
         {funds.map((fund) => {
           return (
