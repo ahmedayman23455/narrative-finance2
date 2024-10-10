@@ -1,26 +1,33 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
+import Link from "next/link";
 
 interface IStakingCard {
   poolApy: string;
   price: string;
+  fundTag?: string;
   volume24h: string;
   tvl: string;
   coinsName: string;
   coinImages: string[]; // Array of image URLs
+  setSelectedPair?: (pair: string) => void;
 }
 
 const StakingCard = ({
   poolApy,
   price,
   volume24h,
+  fundTag,
   tvl,
   coinsName,
   coinImages,
+  setSelectedPair,
 }: IStakingCard) => {
   return (
-    <div
+    <Link
+      href="#liquidity"
+      passHref
       className=" h-auto flex flex-col gap-4 bg-white dark:bg-[#1E1E1E] p-4 rounded-xl dark:border 
     dark:border-[#363638]"
     >
@@ -79,8 +86,16 @@ const StakingCard = ({
         </div>
       </div>
 
-      <Button size="lg"> Supply Liquidity</Button>
-    </div>
+      <Button
+        size="lg"
+        asChild
+        onClick={() => {
+          setSelectedPair && fundTag && setSelectedPair(fundTag);
+        }}
+      >
+        <Link href="#liquidity">Supply Liquidity</Link>
+      </Button>
+    </Link>
   );
 };
 

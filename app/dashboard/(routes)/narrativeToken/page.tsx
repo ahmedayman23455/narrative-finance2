@@ -1,18 +1,18 @@
-import React, {memo} from "react";
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
+import React, { memo } from "react";
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 import StatsCard from "@/components/dashboard/stats-card";
 
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
-import {Input} from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 
 import SolanaChart from "@/components/dashboard/solana-chart";
 
 import Link from "next/link";
-import {ArrowDown} from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 import {
   Select,
@@ -24,7 +24,11 @@ import {
 
 const NarrativeTokenPage = () => {
   return (
-    <div className={cn("relative h-full pt-10 px-4 pb-4 lg:pl-[264px] lg:pt-0 lg:pb-20")}>
+    <div
+      className={cn(
+        "relative h-full pt-10 px-4 pb-4 lg:pl-[264px] lg:pt-0 lg:pb-20"
+      )}
+    >
       <div className="w-full relative">
         {/* header */}
         <div className="sticky mt-8 lg:mt-0 right-0 left-0 top-0 lg:py-4 flex items-center justify-between lg:z-[80]">
@@ -78,11 +82,18 @@ const NarrativeTokenPage = () => {
 
             <div className="flex flex-col w-full lg:max-w-[468px]">
               <div className="relative w-full lg:max-w-[468px] px-4 pb-4 bg-[#F8FAFE] dark:bg-[#1E1E1E] rounded-lg">
-                <Tabs defaultValue="Swap" className="flex flex-col gap-4 w-full">
+                <Tabs
+                  defaultValue="Swap"
+                  className="flex flex-col gap-4 w-full"
+                >
                   <div className="relative flex flex-col w-full justify-between">
                     <div className="z-10 flex flex-row gap-4 items-center justify-between w-full px-4 mt-4 bg-[#F2F4F7] dark:!bg-[#242424] rounded-md">
                       <TabsList className="!w-max !bg-transparent !shadow-none !border-none !px-0">
-                        <TabsTrigger value="Swap" className="max-w-[70px]" bgWhiteActive>
+                        <TabsTrigger
+                          value="Swap"
+                          className="max-w-[70px]"
+                          bgWhiteActive
+                        >
                           Swap
                         </TabsTrigger>
                         <TabsTrigger value="Send" className="max-w-[70px]">
@@ -116,7 +127,10 @@ const NarrativeTokenPage = () => {
                       <>
                         <div className="relative flex flex-col gap-4">
                           <div className="p-4 bg-[#F2F4F7] dark:bg-[#242424] rounded-md">
-                            <label htmlFor="amount" className="text-sm font-medium">
+                            <label
+                              htmlFor="amount"
+                              className="text-sm font-medium"
+                            >
                               You pay
                             </label>
 
@@ -128,7 +142,7 @@ const NarrativeTokenPage = () => {
                                   </span>
 
                                   <Input
-                                    type="text"
+                                    type="number"
                                     name="amount"
                                     id="amount"
                                     className="w-full pl-6 outline-none !bg-none !shadow-none text-3xl border-none !focus:outline-none"
@@ -167,7 +181,10 @@ const NarrativeTokenPage = () => {
                           </div>
 
                           <div className="p-4 bg-[#F2F4F7] dark:bg-[#242424] rounded-md">
-                            <label htmlFor="amount" className="text-sm font-medium">
+                            <label
+                              htmlFor="amount"
+                              className="text-sm font-medium"
+                            >
                               You receive
                             </label>
 
@@ -179,7 +196,7 @@ const NarrativeTokenPage = () => {
                                   </span>
 
                                   <Input
-                                    type="text"
+                                    type="number"
                                     name="amount"
                                     id="amount"
                                     className="w-full pl-6 outline-none !bg-none !shadow-none text-3xl border-none !focus:outline-none"
@@ -226,7 +243,11 @@ const NarrativeTokenPage = () => {
                           </Button>
                         </div>
 
-                        <Button variant="default" size="lg" className="w-full mt-4">
+                        <Button
+                          variant="default"
+                          size="lg"
+                          className="w-full mt-4"
+                        >
                           Swap
                         </Button>
                       </>

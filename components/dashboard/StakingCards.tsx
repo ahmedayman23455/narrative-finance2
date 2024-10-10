@@ -7,7 +7,11 @@ import { funds } from "@/data/demoFunds";
 import "swiper/css";
 import "swiper/css/scrollbar";
 
-const StakingCards = () => {
+interface IStakingCards {
+  setSelectedPair: (pair: string) => void;
+}
+
+const StakingCards = ({ setSelectedPair }: IStakingCards) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -45,6 +49,7 @@ const StakingCards = () => {
           return (
             <SwiperSlide key={fund.id}>
               <StakingCard
+                fundTag={fund.tag}
                 coinsName={`${fund.tag?.toUpperCase()}/USDT`}
                 poolApy="100%"
                 price="$20.00"
@@ -54,6 +59,7 @@ const StakingCards = () => {
                   "/assets/site/logoIcon.png",
                   "/assets/site/coins/coin30.png",
                 ]}
+                setSelectedPair={setSelectedPair}
               />
             </SwiperSlide>
           );

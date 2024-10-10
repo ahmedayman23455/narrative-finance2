@@ -33,7 +33,8 @@ const FeaturedNarratives = () => {
         },
       }}
       pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      // scrollbar={{ draggable: true }}
+      scrollbar={false}
     >
       <SwiperSlide>
         <CarouselCard

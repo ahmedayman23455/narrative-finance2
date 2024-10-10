@@ -19,8 +19,7 @@ const Footer = () => {
           className="relative px-4 md:px-16 md:pr-24 bg-primary text-white rounded-3xl flex flex-col md:flex-row 
     items-start justify-between gap-8 md:gap-4 py-16 md:py-24 px-0 overflow-hidden"
         >
-          <div className="flex flex-col gap-8  max-w-[350PX]">
-            {/* <div className="relative h-25 w-25 md"> */}
+          <div className="flex flex-col gap-8  max-w-[350PX] ">
             <Image
               src="/assets/site/footerLogo2.png"
               alt="Logo"
@@ -30,7 +29,7 @@ const Footer = () => {
             />
             {/* </div> */}
             <p className="">
-              Infrastructure for on chain index funds that track track the most
+              Infrastructure for on chain index funds that track the most
               important narratives in crypto.
             </p>
           </div>

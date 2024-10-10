@@ -1,19 +1,19 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 
-import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-import {Input} from "@/components/ui/input";
+import { Input } from "@/components/ui/input";
 
 import ArrowRight from "@/components/icons/arrow-right";
 
 import TokenBadge from "@/components/dashboard/token-badge";
 
 import LoadingSpinner from "@/components/general/loading-spinner";
-import {Check, CircleCheck} from "lucide-react";
-import {Progress} from "@/components/ui/progress";
+import { Check, CircleCheck } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
 
 interface Coin {
   name: string;
@@ -21,10 +21,10 @@ interface Coin {
 }
 
 const coins: Coin[] = [
-  {name: "Solana", percentage: 45},
-  {name: "Bitcoin", percentage: 35},
-  {name: "Ethereum", percentage: 15},
-  {name: "Cardano", percentage: 5},
+  { name: "Solana", percentage: 45 },
+  { name: "Bitcoin", percentage: 35 },
+  { name: "Ethereum", percentage: 15 },
+  { name: "Cardano", percentage: 5 },
 ];
 
 const UserTransactionss = () => {
@@ -86,14 +86,21 @@ const UserTransactionss = () => {
                 </div>
 
                 <TabsContent value="mintSmg">
-                  <Tabs defaultValue="depositUSDC" className="flex flex-col gap-4">
+                  <Tabs
+                    defaultValue="depositUSDC"
+                    className="flex flex-col gap-4"
+                  >
                     <div className="relative flex flex-col gap-4 w-full  justify-between">
                       {/* > tabs */}
 
                       <div className=" z-10 flex flex-col gap-4 lg:flex-row items-center justify-between w-full px-4">
                         <TabsList className="!w-full">
-                          <TabsTrigger value="depositUSDC">Deposit USDC</TabsTrigger>
-                          <TabsTrigger value="depositToken">Deposit Token</TabsTrigger>
+                          <TabsTrigger value="depositUSDC">
+                            Deposit USDC
+                          </TabsTrigger>
+                          <TabsTrigger value="depositToken">
+                            Deposit Token
+                          </TabsTrigger>
                         </TabsList>
                       </div>
 
@@ -103,7 +110,9 @@ const UserTransactionss = () => {
                             <div className="flex items-center justify-between px-4">
                               <p>
                                 Balance:
-                                <span className="font-semibold">&nbsp; 3425.8 USDC</span>
+                                <span className="font-semibold">
+                                  &nbsp; 3425.8 USDC
+                                </span>
                               </p>
                               MAX
                             </div>
@@ -117,7 +126,7 @@ const UserTransactionss = () => {
                                 </span>
 
                                 <Input
-                                  type="text"
+                                  type="number"
                                   name="amount"
                                   id="amount"
                                   className="w-full pl-6 outline-none !bg-none !shadow-none text-3xl border-none !focus:outline-none"
@@ -128,7 +137,9 @@ const UserTransactionss = () => {
                             <div className="flex items-center justify-between bg-primary text-white mt-8 px-4 py-2 rounded-bl-lg rounded-br-lg">
                               <p>
                                 Minting
-                                <span className="font-semibold">&nbsp; ~4.596 SMG</span>
+                                <span className="font-semibold">
+                                  &nbsp; ~4.596 SMG
+                                </span>
                               </p>
 
                               <Button
@@ -302,7 +313,10 @@ const UserTransactionss = () => {
                             </div>
 
                             <div className="flex flex-col gap-2">
-                              <Button className="w-full" onClick={() => claimHandler()}>
+                              <Button
+                                className="w-full"
+                                onClick={() => claimHandler()}
+                              >
                                 Rebalance
                               </Button>
                               <Button className="w-full bg-blue-900 hover:bg-blue-900/90">
@@ -319,7 +333,9 @@ const UserTransactionss = () => {
                             <div className="flex items-center justify-between px-4">
                               <p>
                                 Balance:
-                                <span className="font-semibold">&nbsp; 3425.8 USDC</span>
+                                <span className="font-semibold">
+                                  &nbsp; 3425.8 USDC
+                                </span>
                               </p>
                               MAX
                             </div>
@@ -333,7 +349,7 @@ const UserTransactionss = () => {
                                 </span>
 
                                 <Input
-                                  type="text"
+                                  type="number"
                                   name="amount"
                                   id="amount"
                                   className="w-full pl-6 outline-none !bg-none !shadow-none text-3xl border-none !focus:outline-none"
@@ -344,7 +360,9 @@ const UserTransactionss = () => {
                             <div className="flex items-center justify-between bg-primary text-white mt-8 px-4 py-2 rounded-bl-lg rounded-br-lg">
                               <p>
                                 Minting
-                                <span className="font-semibold">&nbsp; ~4.596 SMG</span>
+                                <span className="font-semibold">
+                                  &nbsp; ~4.596 SMG
+                                </span>
                               </p>
 
                               <Button
@@ -518,7 +536,10 @@ const UserTransactionss = () => {
                             </div>
 
                             <div className="flex flex-col gap-2">
-                              <Button className="w-full" onClick={() => claimHandler()}>
+                              <Button
+                                className="w-full"
+                                onClick={() => claimHandler()}
+                              >
                                 Rebalance
                               </Button>
                               <Button className="w-full bg-blue-900 hover:bg-blue-900/90">
@@ -543,8 +564,9 @@ const UserTransactionss = () => {
                     ) : (
                       !redeemCompleted && (
                         <p className="italic text-xs font-light">
-                          You are free to choode your preferred redeem method, you can
-                          choose to redeem them directly or convert them to USDC
+                          You are free to choode your preferred redeem method,
+                          you can choose to redeem them directly or convert them
+                          to USDC
                         </p>
                       )
                     )}
@@ -596,7 +618,10 @@ const UserTransactionss = () => {
 
                     {redeemCompleted === false && redeemLoading === false && (
                       <div className="flex flex-col gap-2">
-                        <Button className="w-full" onClick={() => claimHandler()}>
+                        <Button
+                          className="w-full"
+                          onClick={() => claimHandler()}
+                        >
                           Claim
                         </Button>
                         <Button className="w-full bg-blue-900 hover:bg-blue-900/90">

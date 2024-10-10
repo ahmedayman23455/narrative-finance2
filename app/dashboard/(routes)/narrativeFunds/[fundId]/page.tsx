@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Button} from "@/components/ui/button";
+import React, { useState } from "react";
+import { cn } from "@/lib/utils";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 
 import StatsCard from "@/components/dashboard/stats-card";
 
-import {funds} from "@/data/demoFunds";
+import { funds } from "@/data/demoFunds";
 import VerifiedIcon from "@/components/icons/verified-icon";
 import Image from "next/image";
 import SolanaChart from "@/components/dashboard/solana-chart";
@@ -25,19 +25,23 @@ interface CoinProps {
 }
 
 const coins: Coin[] = [
-  {name: "Solana", percentage: 45},
-  {name: "Bitcoin", percentage: 35},
-  {name: "Ethereum", percentage: 15},
-  {name: "Cardano", percentage: 5},
+  { name: "Solana", percentage: 45 },
+  { name: "Bitcoin", percentage: 35 },
+  { name: "Ethereum", percentage: 15 },
+  { name: "Cardano", percentage: 5 },
 ];
 
-const FundPage = ({params}: {params: {fundId: string}}) => {
-  const {fundId} = params;
+const FundPage = ({ params }: { params: { fundId: string } }) => {
+  const { fundId } = params;
 
   const selectedFund = funds.find((fund) => fund.id === fundId);
 
   return (
-    <div className={cn("relative h-full pt-10 px-4 pb-4 lg:pl-[264px] lg:pt-0 lg:pb-20")}>
+    <div
+      className={cn(
+        "relative h-full pt-10 px-4 pb-4 lg:pl-[264px] lg:pt-0 lg:pb-20"
+      )}
+    >
       <div className="w-full relative">
         {/* header */}
         <div className="sticky mt-8 lg:mt-0 right-0 left-0 top-0 lg:py-4 flex items-center justify-between lg:z-[80] ">
